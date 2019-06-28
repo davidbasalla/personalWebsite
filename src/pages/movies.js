@@ -17,10 +17,16 @@ class MovieIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <div className="wrapper">
-            <h2 className="section-headline">Movies I worked on</h2>
+            <div className={styles.description}>
+              <h2>Movies</h2>
+              <p>
+                I worked on a number of movies in my career in the VFX industry
+                between 2004 and 2014 in London, Wellington and San Francisco!
+                Click on each movie to see more details.
+              </p>
+            </div>
             <ul className={styles.tilesList}>
               {movies.map(({ node }) => {
-                console.log(node)
                 return (
                   <li key={node.id}>
                     <Img fluid={node.heroImage.fluid} />
@@ -47,6 +53,7 @@ export const pageQuery = graphql`
     allContentfulMovie {
       edges {
         node {
+          id
           title
           heroImage {
             id
