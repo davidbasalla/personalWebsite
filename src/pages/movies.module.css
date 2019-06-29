@@ -17,10 +17,58 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2px;
 }
 
 .description {
   padding-bottom: 20px;
 }
+
+.gridItem {
+  overflow: hidden;
+  position: relative;
+}
+
+.movieTile {
+  width: 100%;
+  filter: brightness(100%) contrast(100%);
+  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
+}
+
+.movieTile:hover {
+  transform: scale(1.05);
+  filter: brightness(30%) contrast(100%);
+  transition: 0.25s transform linear, 0.25s -webkit-filter linear;
+  overflow: hidden;
+
+  /* transition: 0.1s filter linear, 0.1s -webkit-filter linear; */
+}
+
+/* .thumbnail {
+  width: 100%;
+  filter: grayscale(25%) brightness(120%) contrast(85%);
+  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
+}
+
+.thumbnail:hover {
+  filter: grayscale(0%) brightness(100%) contrast(100%);
+  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
+} */
+
+.titleOverlay {
+  padding-top: 50%;
+  /* z-index: 1; */
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  font-size: large;
+  text-align: center;
+}
+
+/* .titleOverlay:hover {
+  display: block;
+  color: red;
+  z-index: 1;
+} */

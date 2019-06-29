@@ -28,8 +28,13 @@ class MovieIndex extends React.Component {
             <ul className={styles.tilesList}>
               {movies.map(({ node }) => {
                 return (
-                  <li key={node.id}>
-                    <Img fluid={node.heroImage.fluid} />
+                  <li key={node.id} className={styles.gridItem}>
+                    <Link to={`/movies/${node.id}`}>
+                      <div className={styles.titleOverlay}>{node.title}</div>
+                      <div className={styles.movieTile}>
+                        <Img fluid={node.heroImage.fluid} />
+                      </div>
+                    </Link>
                   </li>
                 )
               })}

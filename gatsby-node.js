@@ -6,6 +6,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
+    const movieTemplate = path.resolve('./src/templates/movie.js')
+
     resolve(
       graphql(
         `
@@ -15,6 +17,14 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   title
                   id
+                }
+              }
+            }
+            allContentfulMovie(sort: { fields: startYear, order: DESC }) {
+              edges {
+                node {
+                  id
+                  title
                 }
               }
             }
@@ -33,6 +43,17 @@ exports.createPages = ({ graphql, actions }) => {
             component: blogPost,
             context: {
               id: post.node.id,
+            },
+          })
+        })
+
+        const movies = result.data.allContentfulMovie.edges
+        movies.forEach((movie, index) => {
+          createPage({
+            path: `/movies/${movie.node.id}/`,
+            component: movieTemplate,
+            context: {
+              id: movie.node.id,
             },
           })
         })
