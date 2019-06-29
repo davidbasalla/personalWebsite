@@ -50,7 +50,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulMovie {
+    allContentfulMovie(sort: { fields: startYear, order: DESC }) {
       edges {
         node {
           id
