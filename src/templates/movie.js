@@ -20,7 +20,7 @@ class MovieTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <div className="wrapper">
-            <h1>{`${movie.title} (${duration})`}</h1>
+            <h2>{`${movie.title} (${duration})`}</h2>
 
             <div className={styles.movieContent}>
               <div className={styles.imageContainer}>

@@ -2,10 +2,21 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import ReactMarkdown from 'react-markdown'
 
-import heroStyles from '../components/hero.module.css'
+import styles from './blog-post.module.css'
+
+export const dateString = input => {
+  const currentDate = new Date(input)
+
+  const date = currentDate.getDate()
+  const month = currentDate.getMonth() //Be careful! January is 0 not 1
+  const year = currentDate.getFullYear()
+
+  const output = date + '/' + (month + 1) + '/' + year
+  return output
+}
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -16,23 +27,19 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          {/* <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
-          </div> */}
           <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
+            <h2>{post.title}</h2>
             <p
               style={{
                 display: 'block',
               }}
             >
-              {/* {post.publishDate} */}
+              {dateString(post.createdAt)}
             </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.body,
-              }}
-            />
+
+            <div className={styles.postBody}>
+              <ReactMarkdown source={post.body.body} />
+            </div>
           </div>
         </div>
       </Layout>
@@ -51,6 +58,7 @@ export const pageQuery = graphql`
     }
     contentfulBlogPost(id: { eq: $id }) {
       title
+      createdAt
       body {
         body
       }

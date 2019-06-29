@@ -17,7 +17,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 2px;
 }
 
@@ -38,7 +38,7 @@
 
 .movieTile:hover {
   transform: scale(1.05);
-  filter: brightness(30%) contrast(100%);
+  filter: brightness(50%) contrast(100%);
   transition: 0.25s transform linear, 0.25s -webkit-filter linear;
   overflow: hidden;
 
