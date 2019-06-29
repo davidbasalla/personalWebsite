@@ -15,13 +15,11 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>Blog</div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+            <ul className={styles.bloglist}>
               {posts.map(({ node }) => {
                 return (
-                  <li key={node.id}>
+                  <li key={node.id} className={styles.listItem}>
                     <ArticlePreview article={node} />
                   </li>
                 )
@@ -48,6 +46,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          createdAt
           body {
             body
           }

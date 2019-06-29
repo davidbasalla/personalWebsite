@@ -1,25 +1,26 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 
 import styles from './article-preview.module.css'
 
+export const dateString = input => {
+  const currentDate = new Date(input)
+
+  const date = currentDate.getDate()
+  const month = currentDate.getMonth() //Be careful! January is 0 not 1
+  const year = currentDate.getFullYear()
+
+  const output = date + '/' + (month + 1) + '/' + year
+  return output
+}
+
 export default ({ article }) => (
   <div className={styles.preview}>
-    {/* <Img alt="" fluid={article.heroImage.fluid} /> */}
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.id}`}>{article.title}</Link>
     </h3>
-    {/* <small>{article.publishDate}</small> */}
-    <p
-      dangerouslySetInnerHTML={{
-        __html: article.body.body,
-      }}
-    />
-    {/* {article.tags.map(tag => (
-      <p className={styles.tag} key={tag}>
-        {tag}
-      </p>
-    ))} */}
+    <small>{dateString(article.createdAt)}</small>
+    <ReactMarkdown source={article.body.body} />
   </div>
 )
