@@ -21,6 +21,7 @@ export default ({ article }) => (
       <Link to={`/blog/${article.id}`}>{article.title}</Link>
     </h3>
     <small>{dateString(article.createdAt)}</small>
-    <ReactMarkdown source={article.body.body} />
+    <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
+    <Link to={`/blog/${article.id}`}>READ MORE</Link>
   </div>
 )
