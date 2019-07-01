@@ -2,8 +2,17 @@
   display: none;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .previewTitle {
   font-size: 1.5em;
+}
+
+.dateField {
+  padding-top: 35px;
 }
 
 .tag {

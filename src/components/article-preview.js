@@ -17,10 +17,14 @@ export const dateString = input => {
 
 export default ({ article }) => (
   <div className={styles.preview}>
-    <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${article.id}`}>{article.title}</Link>
-    </h3>
-    <small>{dateString(article.createdAt)}</small>
+    <div className={styles.header}>
+      <h3 className={styles.previewTitle}>
+        <Link to={`/blog/${article.id}`}>{article.title}</Link>
+      </h3>
+      <small className={styles.dateField}>
+        {dateString(article.createdAt)}
+      </small>
+    </div>
     <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
     <Link to={`/blog/${article.id}`}>READ MORE</Link>
   </div>

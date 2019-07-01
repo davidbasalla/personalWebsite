@@ -1,3 +1,8 @@
+.intro {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
 .bloglist {
   list-style-type: none;
   margin: 0;
