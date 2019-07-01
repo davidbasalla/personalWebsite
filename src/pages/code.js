@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styles from './code.module.css'
 import Layout from '../components/layout'
-// import MovieTile from '../components/movie-tile'
 
 class WorkIndex extends React.Component {
   render() {
@@ -32,7 +31,7 @@ class WorkIndex extends React.Component {
                 .map(({ node }) => {
                   return (
                     <li key={node.id} className={styles.gridItem}>
-                      <Link to={`/movies/${node.id}`}>
+                      <Link to={`/code/${node.id}`}>
                         <div className={styles.tileOverlay}>{node.title}</div>
                         <div className={styles.tile}>
                           <Img fluid={node.heroImage.fluid} />
@@ -56,7 +55,7 @@ class WorkIndex extends React.Component {
                 .map(({ node }) => {
                   return (
                     <li key={node.id} className={styles.gridItem}>
-                      <Link to={`/movies/${node.id}`}>
+                      <Link to={`/code/${node.id}`}>
                         <div className={styles.tileOverlay}>{node.title}</div>
                         <div className={styles.tile}>
                           <Img fluid={node.heroImage.fluid} />

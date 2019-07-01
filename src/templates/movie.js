@@ -22,7 +22,7 @@ class MovieTemplate extends React.Component {
           <div className="wrapper">
             <h2>{`${movie.title} (${duration})`}</h2>
 
-            <div className={styles.movieContent}>
+            <div className={styles.content}>
               <div className={styles.imageContainer}>
                 <Img fluid={movie.heroImage.fluid} />
               </div>

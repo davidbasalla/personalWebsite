@@ -70,7 +70,7 @@ exports.createPages = ({ graphql, actions }) => {
         const workProjects = result.data.allContentfulWork.edges
         workProjects.forEach((workProject, index) => {
           createPage({
-            path: `/workProjects/${workProject.node.id}/`,
+            path: `/code/${workProject.node.id}/`,
             component: workProjectTemplate,
             context: {
               id: workProject.node.id,
