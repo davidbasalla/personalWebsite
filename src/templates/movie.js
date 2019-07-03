@@ -1,12 +1,13 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 import styles from './movie.module.css'
 
+import imdb from '../../assets/images/imdb.jpg'
 class MovieTemplate extends React.Component {
   render() {
     const movie = get(this.props, 'data.contentfulMovie')
@@ -20,7 +21,17 @@ class MovieTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <div className="wrapper">
-            <h2>{`${movie.title} (${duration})`}</h2>
+            <div className={styles.header}>
+              <h2>{`${movie.title} (${duration})`}</h2>
+
+              {movie.imdbLink && (
+                <div className={styles.imdbContainer}>
+                  <a target="_blank" href={movie.imdbLink}>
+                    <img className={styles.imdbImage} src={imdb} />
+                  </a>
+                </div>
+              )}
+            </div>
 
             <div className={styles.content}>
               <div className={styles.imageContainer}>
@@ -44,13 +55,7 @@ class MovieTemplate extends React.Component {
 
                 {movie.position}
 
-                <p>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: movie.description.description,
-                    }}
-                  />
-                </p>
+                <ReactMarkdown source={movie.description.description} />
               </div>
             </div>
           </div>
