@@ -61,11 +61,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulBlogPost(limit: 3) {
+    allContentfulBlogPost(sort: { fields: date, order: DESC }, limit: 3) {
       edges {
         node {
           id
           title
+          date
           createdAt
           body {
             body

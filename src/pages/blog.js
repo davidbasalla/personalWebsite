@@ -42,11 +42,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
           id
           title
+          date
           createdAt
           body {
             body
