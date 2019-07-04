@@ -1,5 +1,10 @@
 .preview img {
-  display: none;
+  /* display: none; */
+  float: left;
+  height: auto;
+  width: auto;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .header {

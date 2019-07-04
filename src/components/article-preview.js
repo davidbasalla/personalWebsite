@@ -15,17 +15,26 @@ export const dateString = input => {
   return output
 }
 
-export default ({ article }) => (
-  <div className={styles.preview}>
-    <div className={styles.header}>
-      <h3 className={styles.previewTitle}>
-        <Link to={`/blog/${article.id}`}>{article.title}</Link>
-      </h3>
-      <small className={styles.dateField}>
-        {dateString(article.createdAt)}
-      </small>
+export default ({ article }) => {
+  // console.log(article)
+  const regex = /images..*(?:png|jpg)/g
+  const images = article.body.body.match(regex) || []
+  console.log(images)
+
+  return (
+    <div className={styles.preview}>
+      <div className={styles.header}>
+        <h3 className={styles.previewTitle}>
+          <Link to={`/blog/${article.id}`}>{article.title}</Link>
+        </h3>
+        <small className={styles.dateField}>
+          {dateString(article.createdAt)}
+        </small>
+      </div>
+      {images.length > 0 &&
+        images.map(image => <img src={`https://${image}?h=100`} />)}
+      <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
+      <Link to={`/blog/${article.id}`}>READ MORE</Link>
     </div>
-    <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
-    <Link to={`/blog/${article.id}`}>READ MORE</Link>
-  </div>
-)
+  )
+}
