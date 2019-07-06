@@ -12,7 +12,8 @@ body {
   font-family: 'Lora', 'Times', serif;
   font-size: 1.1em;
   line-height: 1.65;
-  color: #373f49;
+  /* color: #373f49; */
+  color: #a0aec0;
   margin: 0;
   background-image: url('../../assets/images/canterbury_05.jpg');
   background-size: cover;
@@ -20,7 +21,7 @@ body {
   /* background-image: linear-gradient(to bottom right, lightblue, teal); */
   /* background-size: 100%; */
   background-attachment: fixed;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
 
 img {
@@ -29,6 +30,7 @@ img {
 }
 
 h1 {
+  color: #eeeeee;
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-size: 1.75em;
   font-weight: normal;
@@ -38,6 +40,7 @@ h1 {
 
 h2,
 h3 {
+  color: #eeeeee;
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-weight: normal;
   font-size: 1.5em;
@@ -45,15 +48,17 @@ h3 {
 }
 
 a {
-  color: currentColor;
+  color: #eeeeee;
 }
 
 .mainWrapper {
   /* background-image: linear-gradient(white, white, #00cc8844);
   background-attachment: fixed; */
+  background-color: #1a202c;
 }
 
 .wrapper {
+  background-color: #1a202c;
   width: calc(100% - 10vmin);
   margin: 0 auto;
   padding-bottom: 50px;
@@ -103,4 +108,8 @@ a {
 small {
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-size: 0.85em;
+}
+
+img {
+  /* border: 1px solid #ddd; */
 }

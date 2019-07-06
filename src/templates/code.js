@@ -37,13 +37,7 @@ class CodeTemplate extends React.Component {
                   </div>
                 )}
 
-                <p>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: work.description.description,
-                    }}
-                  />
-                </p>
+                <ReactMarkdown source={work.description.description} />
               </div>
             </div>
           </div>

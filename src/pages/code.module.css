@@ -18,7 +18,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2px;
+  grid-gap: 10px;
 }
 
 .description {
@@ -28,6 +28,7 @@
 .gridItem {
   overflow: hidden;
   position: relative;
+  border: 2px solid #666666;
 }
 
 .tile {

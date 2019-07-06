@@ -5,7 +5,7 @@ export default ({ children }) => (
     style={{
       maxWidth: 1280,
       margin: '0 auto',
-      background: 'white',
+      background: '#1a202c',
       'min-height': '100vh',
     }}
   >

@@ -10,7 +10,7 @@
   justify-content: center;
   list-style: none;
   padding: 0;
-  padding-top: 5px;
+  padding-top: 7px;
   margin: 0;
   height: 20vh;
   max-height: 100px;
@@ -32,10 +32,11 @@
 }
 
 .logo {
+  color: white;
   margin: 24px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 2em;
+  font-size: 2.25em;
   text-transform: uppercase;
   font-family: 'Voltaire', 'Avenir', sans-serif;
 }
