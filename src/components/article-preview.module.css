@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Voltaire&display=swap');
 
 .preview img {
-  /* display: none; */
   float: left;
   height: auto;
   width: auto;
@@ -36,4 +35,10 @@
   border-radius: 2px;
   border: 1px solid #a0a0a0;
   margin-right: 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: block;
+  }
 }

@@ -9,9 +9,6 @@
   overflow: hidden;
 }
 
-/**
- * tiles grid
- */
 .tilesList {
   margin: 0;
   padding: 0;
@@ -56,8 +53,8 @@
   text-align: center;
 }
 
-/* .titleOverlay:hover {
-  display: block;
-  color: red;
-  z-index: 1;
-} */
+@media only screen and (max-width: 1000px) {
+  .tilesList {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}

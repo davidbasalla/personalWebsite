@@ -61,3 +61,17 @@
 .logo a {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 1000px) {
+  .navigationList {
+    display: none;
+  }
+
+  .logo {
+    color: white;
+    margin: 20px;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    font-family: 'Voltaire', 'Avenir', sans-serif;
+  }
+}

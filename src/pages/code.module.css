@@ -64,3 +64,9 @@
 
   /* transition: 0.1s filter linear, 0.1s -webkit-filter linear; */
 }
+
+@media only screen and (max-width: 1000px) {
+  .tile {
+    height: 50px;
+  }
+}
