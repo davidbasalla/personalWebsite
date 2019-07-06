@@ -8,6 +8,16 @@ import Layout from '../components/layout'
 
 import favicon from '../../static/favicon.ico'
 
+const Video = ({ videoSrcURL, videoTitle, ...props }) => (
+  <div className={styles.embedContainer}>
+    <iframe
+      src="https://www.youtube.com/embed/wO4qWBAkljQ"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+  </div>
+)
+
 class MovieIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -49,6 +59,22 @@ class MovieIndex extends React.Component {
                 )
               })}
             </ul>
+
+            <div className={styles.description}>
+              <h2>Showreel</h2>
+              <p>
+                Blast from the past - here's my showreel from 2011, sadly not in
+                HD quality. At some point I should make an updated versions with
+                all the work I did after that. Also a word of warning - corny
+                music alert! And ignore my old email address - who even uses
+                Hotmail these days pfff... 🙄
+              </p>
+            </div>
+
+            <Video
+              videoSrcURL="https://www.youtube.com/watch?v=wO4qWBAkljQ"
+              videoTitle="Showreel 2011"
+            />
           </div>
         </div>
       </Layout>
