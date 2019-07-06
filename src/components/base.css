@@ -14,6 +14,13 @@ body {
   line-height: 1.65;
   color: #373f49;
   margin: 0;
+  background-image: url('../../assets/images/canterbury_05.jpg');
+  background-size: cover;
+  background-blend-mode: color-burn;
+  /* background-image: linear-gradient(to bottom right, lightblue, teal); */
+  /* background-size: 100%; */
+  background-attachment: fixed;
+  overscroll-behavior: none;
 }
 
 img {
@@ -41,10 +48,17 @@ a {
   color: currentColor;
 }
 
+.mainWrapper {
+  /* background-image: linear-gradient(white, white, #00cc8844);
+  background-attachment: fixed; */
+}
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
   padding-bottom: 50px;
+  background-attachment: fixed;
+
   /* padding: 5vmin 0; */
 }
 
