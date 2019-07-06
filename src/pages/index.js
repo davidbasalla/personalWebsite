@@ -25,7 +25,7 @@ class RootIndex extends React.Component {
               <ReactMarkdown source={page.body.body} />
             </div>
 
-            <h2>Latest blog posts:</h2>
+            <h1>Latest blog posts:</h1>
             <ul className={styles.bloglist}>
               {posts.map(({ node }) => {
                 return (

@@ -16,10 +16,8 @@ export const dateString = input => {
 }
 
 export default ({ article }) => {
-  // console.log(article)
   const regex = /images..*(?:png|jpg)/g
   const images = article.body.body.match(regex) || []
-  console.log(images)
 
   return (
     <div className={styles.preview}>
@@ -31,8 +29,7 @@ export default ({ article }) => {
           {dateString(article.createdAt)}
         </small>
       </div>
-      {images.length > 0 &&
-        images.map(image => <img src={`https://${image}?h=100`} />)}
+      {images.length > 0 && <img src={`https://${images[0]}?h=100`} />}
       <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
       <Link to={`/blog/${article.id}`}>READ MORE</Link>
     </div>

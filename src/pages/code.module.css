@@ -42,10 +42,12 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  /* height: 100%; */
   text-align: center;
   color: white;
   top: 45%;
+  font-family: 'Voltaire', 'Avenir', sans-serif;
+  font-size: 1.25em;
+  text-transform: uppercase;
 }
 
 /* .tileOverlay:hover {
