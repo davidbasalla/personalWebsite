@@ -38,6 +38,16 @@
   text-decoration: none;
 }
 
+.navigationItem a:hover {
+  color: #eeeeee;
+  text-decoration: underline;
+}
+
+.navigationItem a.activeLink {
+  color: #eeeeee;
+  text-decoration: underline;
+}
+
 .logo {
   color: white;
   margin: 30px 40px;

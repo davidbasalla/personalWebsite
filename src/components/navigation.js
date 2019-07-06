@@ -10,19 +10,43 @@ export default () => (
 
     <ul className={styles.navigationList}>
       <li className={styles.navigationItem}>
-        <Link to="/code/">Code</Link>
+        <Link
+          className={styles.link}
+          to={'/code/'}
+          activeClassName={styles.activeLink}
+        >
+          Code
+        </Link>
       </li>
 
       <li className={styles.navigationItem}>
-        <Link to="/movies/">Movies</Link>
+        <Link
+          className={styles.link}
+          to={'/movies/'}
+          activeClassName={styles.activeLink}
+        >
+          Movies
+        </Link>
       </li>
 
       <li className={styles.navigationItem}>
-        <Link to="/blog/">Blog</Link>
+        <Link
+          className={styles.link}
+          to={'/blog/'}
+          activeClassName={styles.activeLink}
+        >
+          Blog
+        </Link>
       </li>
 
       <li className={styles.navigationItem}>
-        <Link to="/about-me/">About me</Link>
+        <Link
+          className={styles.link}
+          to={'/about-me/'}
+          activeClassName={styles.activeLink}
+        >
+          About me
+        </Link>
       </li>
     </ul>
   </nav>
