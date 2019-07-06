@@ -22,6 +22,7 @@
 }
 
 .description {
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 
@@ -42,20 +43,7 @@
   filter: brightness(50%) contrast(100%);
   transition: 0.25s transform linear, 0.25s -webkit-filter linear;
   overflow: hidden;
-
-  /* transition: 0.1s filter linear, 0.1s -webkit-filter linear; */
 }
-
-/* .thumbnail {
-  width: 100%;
-  filter: grayscale(25%) brightness(120%) contrast(85%);
-  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
-}
-
-.thumbnail:hover {
-  filter: grayscale(0%) brightness(100%) contrast(100%);
-  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
-} */
 
 .titleOverlay {
   padding-top: 50%;

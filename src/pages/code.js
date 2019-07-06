@@ -28,7 +28,7 @@ class WorkIndex extends React.Component {
           />
           <div className="wrapper">
             <div className={styles.description}>
-              <h2>Professional</h2>
+              <h1>Professional</h1>
               <p>
                 Click on each tile to see more information about the projects
                 that I worked on.
@@ -52,7 +52,7 @@ class WorkIndex extends React.Component {
             </ul>
 
             <div className={styles.description}>
-              <h2>Other</h2>
+              <h1>Other</h1>
               <p>
                 Click on each tile to see more information about the projects
                 that I worked on.

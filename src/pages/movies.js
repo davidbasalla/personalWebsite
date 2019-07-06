@@ -28,10 +28,10 @@ class MovieIndex extends React.Component {
           />
           <div className="wrapper">
             <div className={styles.description}>
-              <h2>Movies</h2>
+              <h1>Movies</h1>
               <p>
-                I worked on a number of movies in my career in the VFX industry
-                between 2004 and 2014 in London, Wellington and San Francisco!
+                I worked on a number of movies in my VFX career between 2004 and
+                2014. My work took me to London, Wellington and San Francisco.
                 Click on each movie to see more details.
               </p>
             </div>

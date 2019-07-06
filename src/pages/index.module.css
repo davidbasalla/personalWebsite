@@ -1,5 +1,6 @@
 .intro {
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -10,6 +11,6 @@
 }
 
 .listItem {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
 }
