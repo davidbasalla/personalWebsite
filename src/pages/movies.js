@@ -5,7 +5,8 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styles from './movies.module.css'
 import Layout from '../components/layout'
-// import MovieTile from '../components/movie-tile'
+
+import favicon from '../../static/favicon.ico'
 
 class MovieIndex extends React.Component {
   render() {
@@ -14,8 +15,17 @@ class MovieIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+        <div className="mainWrapper">
+          <Helmet
+            title={siteTitle}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <div className={styles.description}>
               <h2>Movies</h2>

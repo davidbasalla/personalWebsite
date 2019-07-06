@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
+import favicon from '../../static/favicon.ico'
+
 import styles from './index.module.css'
 
 class RootIndex extends React.Component {
@@ -18,8 +20,17 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+        <div className="mainWrapper">
+          <Helmet
+            title={siteTitle}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <div className={styles.intro}>
               <ReactMarkdown source={page.body.body} />

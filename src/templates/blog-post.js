@@ -5,6 +5,8 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
 
+import favicon from '../../static/favicon.ico'
+
 import styles from './blog-post.module.css'
 
 export const dateString = input => {
@@ -25,8 +27,17 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+        <div className="mainWrapper">
+          <Helmet
+            title={`${post.title} | ${siteTitle}`}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <h2>{post.title}</h2>
             <p

@@ -2,20 +2,32 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import ReactMarkdown from 'react-markdown'
 
 import styles from './code.module.css'
+
+import favicon from '../../static/favicon.ico'
 
 class CodeTemplate extends React.Component {
   render() {
     const work = get(this.props, 'data.contentfulWork')
     const company = work.company
 
-    console.log(work)
-
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className="mainWrapper">
+          <Helmet
+            title={work.title}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <h2>{`${work.title}`}</h2>
 

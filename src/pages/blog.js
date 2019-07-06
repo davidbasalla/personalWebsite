@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
+import favicon from '../../static/favicon.ico'
+
 import styles from './blog.module.css'
 
 class BlogIndex extends React.Component {
@@ -15,7 +17,16 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div className="mainWrapper">
-          <Helmet title={siteTitle} />
+          <Helmet
+            title={siteTitle}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <ul className={styles.bloglist}>
               {posts.map(({ node }) => {

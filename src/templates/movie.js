@@ -3,10 +3,12 @@ import ReactMarkdown from 'react-markdown'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 import styles from './movie.module.css'
 
+import favicon from '../../static/favicon.ico'
 import imdb from '../../assets/images/imdb.jpg'
 class MovieTemplate extends React.Component {
   render() {
@@ -15,11 +17,19 @@ class MovieTemplate extends React.Component {
       ? `${movie.startYear} - ${movie.endYear}`
       : movie.startYear
 
-    console.log(movie)
-
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className="mainWrapper">
+          <Helmet
+            title={movie.title}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <div className={styles.header}>
               <h2>{`${movie.title} (${duration})`}</h2>

@@ -6,17 +6,26 @@ import Helmet from 'react-helmet'
 import styles from './code.module.css'
 import Layout from '../components/layout'
 
+import favicon from '../../static/favicon.ico'
+
 class WorkIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const workProjects = get(this, 'props.data.allContentfulWork.edges')
 
-    console.log(workProjects)
-
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+        <div className="mainWrapper">
+          <Helmet
+            title={siteTitle}
+            link={[
+              {
+                rel: 'shortcut icon',
+                type: 'image/x-icon',
+                href: `${favicon}`,
+              },
+            ]}
+          />
           <div className="wrapper">
             <div className={styles.description}>
               <h2>Professional</h2>
