@@ -79,10 +79,11 @@ class MovieTemplate extends React.Component {
             </div>
             <div className={styles.movieNavigation}>
               <Link to={`/movies/${previousMovie.node.id}`}>
-                {`< ${previousMovie.node.title}`}
+                {`< ${previousMovie.node.shortTitle ||
+                  previousMovie.node.title}`}
               </Link>
               <Link to={`/movies/${nextMovie.node.id}`}>
-                {`${nextMovie.node.title} >`}
+                {`${nextMovie.node.shortTitle || nextMovie.node.title} >`}
               </Link>
             </div>
           </div>
@@ -129,6 +130,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          shortTitle
         }
       }
     }
