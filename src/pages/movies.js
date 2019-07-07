@@ -40,9 +40,11 @@ class MovieIndex extends React.Component {
             <div className={styles.description}>
               <h1>Movies</h1>
               <p>
-                I worked on a number of movies in my VFX career between 2004 and
-                2014. My work took me to London, Wellington and San Francisco.
-                Click on each movie to see more details.
+                I worked on a number of movies in my Visual Effects (VFX career)
+                between 2004 and 2014. I focused on texturing, look development,
+                lighting and increasingly supervision. My work took me to
+                London, Wellington and San Francisco. Click on each movie to see
+                more details.
               </p>
             </div>
             <ul className={styles.tilesList}>

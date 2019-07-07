@@ -53,12 +53,9 @@ a {
 
 .wrapper {
   background-color: #1a202c;
-  width: calc(100% - 10vmin);
-  margin: 0 auto;
+  margin: 0 40px;
   padding-bottom: 50px;
   background-attachment: fixed;
-
-  /* padding: 5vmin 0; */
 }
 
 /**
@@ -101,5 +98,11 @@ a {
 
 small {
   font-family: 'Voltaire', 'Avenir', sans-serif;
-  font-size: 0.85em;
+  font-size: 0.95em;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin: 0 25px;
+  }
 }

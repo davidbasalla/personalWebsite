@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
@@ -33,7 +33,23 @@ class RootIndex extends React.Component {
           />
           <div className="wrapper">
             <div className={styles.intro}>
-              <ReactMarkdown source={page.body.body} />
+              <div className={styles.introText}>
+                <ReactMarkdown source={page.body.body} />
+              </div>
+
+              <div className={styles.fancyLinks}>
+                <Link to={`/code/`} className={styles.fancyLink}>
+                  <div className={styles.tile}>{'Code'}</div>
+                </Link>
+
+                <Link to={`/movies/`} className={styles.fancyLink}>
+                  <div className={styles.tile}>{'VFX'}</div>
+                </Link>
+
+                <Link to={`/blog/`} className={styles.fancyLink}>
+                  <div className={styles.tile}>{'Blog'}</div>
+                </Link>
+              </div>
             </div>
 
             <h1>Latest blog posts:</h1>

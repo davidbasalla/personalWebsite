@@ -5,7 +5,7 @@ import styles from './navigation.module.css'
 export default () => (
   <nav role="navigation" className={styles.navigation}>
     <div className={styles.logo}>
-      <Link to="/">David Basalla [dev|3D]</Link>
+      <Link to="/">David Basalla</Link>
     </div>
 
     <ul className={styles.navigationList}>
@@ -25,7 +25,7 @@ export default () => (
           to={'/movies/'}
           activeClassName={styles.activeLink}
         >
-          Movies
+          VFX
         </Link>
       </li>
 
@@ -45,7 +45,7 @@ export default () => (
           to={'/about-me/'}
           activeClassName={styles.activeLink}
         >
-          About me
+          About
         </Link>
       </li>
     </ul>

@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
             ]}
           />
           <div className="wrapper">
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
             <p
               style={{
                 display: 'block',
