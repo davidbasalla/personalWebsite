@@ -24,6 +24,14 @@
   padding-right: 20px;
 }
 
+.companies {
+  margin-bottom: 10px;
+}
+
+.position {
+  margin-bottom: 20px;
+}
+
 .movieNavigation {
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-size: 1.1em;
@@ -31,4 +39,15 @@
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: block;
+  }
+
+  .imageContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

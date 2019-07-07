@@ -57,22 +57,24 @@ class MovieTemplate extends React.Component {
                 <Img fluid={movie.heroImage.fluid} />
               </div>
               <div className={styles.textContainer}>
-                {movie.company.map(company => {
-                  return (
-                    <div>
-                      <a href={company.url} target="_blank">
-                        {company.name}
-                      </a>
-                      <span>
-                        {' '}
-                        - {company.city}, {company.country}
-                      </span>
-                      <br />
-                    </div>
-                  )
-                })}
+                <div className={styles.companies}>
+                  {movie.company.map(company => {
+                    return (
+                      <div>
+                        <a href={company.url} target="_blank">
+                          {company.name}
+                        </a>
+                        <span>
+                          {' '}
+                          - {company.city}, {company.country}
+                        </span>
+                        <br />
+                      </div>
+                    )
+                  })}
+                </div>
 
-                {movie.position}
+                <div className={styles.position}>{movie.position}</div>
 
                 <ReactMarkdown source={movie.description.description} />
               </div>
