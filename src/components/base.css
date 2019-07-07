@@ -12,16 +12,12 @@ body {
   font-family: 'Lora', 'Times', serif;
   font-size: 1.1em;
   line-height: 1.65;
-  /* color: #373f49; */
   color: #a0aec0;
   margin: 0;
-  background-image: url('../../assets/images/canterbury_05.jpg');
-  background-size: cover;
-  background-blend-mode: color-burn;
-  /* background-image: linear-gradient(to bottom right, lightblue, teal); */
-  /* background-size: 100%; */
+  background-image: url('../../assets/images/shapes_04.jpg');
   background-attachment: fixed;
-  /* overscroll-behavior: none; */
+  background-repeat: repeat-x;
+  background-size: contain;
 }
 
 img {
@@ -52,8 +48,6 @@ a {
 }
 
 .mainWrapper {
-  /* background-image: linear-gradient(white, white, #00cc8844);
-  background-attachment: fixed; */
   background-color: #1a202c;
 }
 
@@ -85,7 +79,7 @@ a {
 .section-headline {
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(148, 109, 50);
 }
 
 /**
@@ -108,8 +102,4 @@ a {
 small {
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-size: 0.85em;
-}
-
-img {
-  /* border: 1px solid #ddd; */
 }

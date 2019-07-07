@@ -1,7 +1,7 @@
 .intro {
   padding-top: 10px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid rgb(148, 109, 50);
 }
 
 .bloglist {
@@ -12,5 +12,5 @@
 
 .listItem {
   padding-bottom: 40px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid rgb(148, 109, 50);
 }
