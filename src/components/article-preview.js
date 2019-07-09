@@ -29,8 +29,8 @@ export default ({ article }) => {
           {dateString(article.createdAt)}
         </small>
       </div>
-      {images.length > 0 && <img src={`https://${images[0]}?h=100`} />}
-      <ReactMarkdown source={article.body.body.substring(0, 300) + '...'} />
+      {images.length > 0 && <img src={`https://${images[0]}?h=150`} />}
+      <ReactMarkdown source={article.body.body.substring(0, 400) + '...'} />
       <Link to={`/blog/${article.id}`}>READ MORE</Link>
     </div>
   )

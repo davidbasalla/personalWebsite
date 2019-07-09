@@ -14,9 +14,10 @@ body {
   line-height: 1.65;
   color: #a0aec0;
   margin: 0;
-  background-image: url('../../assets/images/shapes_04.jpg');
+  background-image: linear-gradient(#1a202c, rgb(30, 52, 70));
+  /* background-image: url('../../assets/images/shapes_04.jpg'); */
   background-attachment: fixed;
-  background-repeat: repeat-x;
+  /* background-repeat: repeat-x; */
   background-size: contain;
 }
 
@@ -99,6 +100,10 @@ a {
 small {
   font-family: 'Voltaire', 'Avenir', sans-serif;
   font-size: 0.95em;
+}
+
+strong {
+  color: #eeeeee;
 }
 
 @media only screen and (max-width: 600px) {
