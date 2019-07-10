@@ -1,6 +1,6 @@
 .intro {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   border-bottom: 2px solid rgb(148, 109, 50);
 }
 
@@ -32,6 +32,10 @@
 .fancyLink:hover {
   text-decoration: underline;
   background-color: #11151d;
+}
+
+.blogHeader {
+  padding-top: 10px;
 }
 
 .bloglist {

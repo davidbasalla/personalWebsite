@@ -29,7 +29,9 @@ class CodeTemplate extends React.Component {
             ]}
           />
           <div className="wrapper">
-            <h2>{`${work.title}`}</h2>
+            <div className={styles.header}>
+              <h2>{`${work.title}`}</h2>
+            </div>
 
             <div className={styles.content}>
               <div className={styles.imageContainer}>
@@ -82,7 +84,7 @@ export const pageQuery = graphql`
       }
       heroImage {
         id
-        fluid(maxHeight: 400, maxWidth: 800) {
+        fluid(maxHeight: 200, maxWidth: 600) {
           ...GatsbyContentfulFluid
         }
       }

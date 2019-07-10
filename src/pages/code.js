@@ -30,8 +30,16 @@ class WorkIndex extends React.Component {
             <div className={styles.description}>
               <h1>Professional</h1>
               <p>
-                Click on each tile to see more information about the projects
-                that I worked on.
+                I've worked on multiple projects at{' '}
+                <a href="https://red-badger.com">Red Badger</a> and{' '}
+                <a href="https://unboxed.co">Unboxed</a> - both London-based
+                digital consultancies - across projects in government, banking
+                and ecommerce. I also worked as a civil servant for the British{' '}
+                <a href="https://www.gov.uk/government/organisations/government-digital-service">
+                  Government Digital Service
+                </a>{' '}
+                on the <a href="https://www.gov.uk/">GOV.UK</a> website. Click
+                on each tile below to see more information about each project.
               </p>
             </div>
             <ul className={styles.tilesList}>
@@ -98,7 +106,7 @@ export const pageQuery = graphql`
           type
           heroImage {
             id
-            fluid(maxHeight: 150, maxWidth: 300) {
+            fluid(maxHeight: 100, maxWidth: 300) {
               ...GatsbyContentfulFluid
             }
           }

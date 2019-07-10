@@ -52,7 +52,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
 
-            <h1>Latest blog posts:</h1>
+            <h1 className={styles.blogHeader}>Latest blog posts:</h1>
             <ul className={styles.bloglist}>
               {posts.map(({ node }) => {
                 return (

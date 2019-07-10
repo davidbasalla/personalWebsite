@@ -1,8 +1,28 @@
 .content {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
 }
 
 .imageContainer {
-  width: 800px;
+  width: 400px;
   padding-right: 20px;
+}
+
+.companies {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: block;
+  }
+
+  .imageContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
