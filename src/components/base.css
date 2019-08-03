@@ -10,11 +10,11 @@
 
 body {
   font-family: 'Lora', 'Times', serif;
-  font-size: 1.1em;
+  sfont-size: 1.1em;
   line-height: 1.65;
   color: #a0aec0;
   margin: 0;
-  background-image: linear-gradient(#1a202c, rgb(30, 52, 70));
+  background-image: linear-gradient(#516677, rgb(87, 118, 143));
   /* background-image: url('../../assets/images/shapes_04.jpg'); */
   background-attachment: fixed;
   /* background-repeat: repeat-x; */

@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
+
+import profile from '../../assets/images/profile.jpg'
 
 import styles from './about.module.css'
 
@@ -11,6 +14,7 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div className="wrapper">
         <div className={styles.preview}>
+          <img className={styles.profilePic} src={profile} />
           <ReactMarkdown source={page.body.body} />
         </div>
       </div>
