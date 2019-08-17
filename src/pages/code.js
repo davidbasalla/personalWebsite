@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import styles from './code.module.css'
 import Layout from '../components/layout'
+import Iconlist from '../components/iconlist'
 
 import favicon from '../../static/favicon.ico'
 
@@ -28,6 +29,9 @@ class WorkIndex extends React.Component {
           />
           <div className="wrapper">
             <div className={styles.description}>
+              <h1>Skills</h1>
+              <Iconlist />
+
               <h1>Professional</h1>
               <p>
                 I've worked on multiple projects at{' '}
