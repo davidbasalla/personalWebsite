@@ -20,8 +20,11 @@
 }
 
 .imageContainer {
-  width: 400px;
   padding-right: 20px;
+}
+
+.gatsbyImage {
+  width: 300px;
 }
 
 .companies {
@@ -47,7 +50,11 @@
   }
 
   .imageContainer {
-    width: 100%;
     margin-bottom: 20px;
+    padding-right: 0px;
+  }
+
+  .gatsbyImage {
+    width: 100%;
   }
 }

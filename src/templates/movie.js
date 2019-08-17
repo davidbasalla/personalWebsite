@@ -54,13 +54,16 @@ class MovieTemplate extends React.Component {
 
             <div className={styles.content}>
               <div className={styles.imageContainer}>
-                <Img fluid={movie.heroImage.fluid} />
+                <Img
+                  className={styles.gatsbyImage}
+                  fluid={movie.heroImage.fluid}
+                />
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.companies}>
                   {movie.company.map(company => {
                     return (
-                      <div>
+                      <div key={company.name}>
                         <a href={company.url} target="_blank">
                           {company.name}
                         </a>
