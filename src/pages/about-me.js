@@ -16,7 +16,7 @@ export default ({ data, location }) => {
       <div className="wrapper">
         <div className={styles.preview}>
           <img className={styles.profilePic} src={profile} />
-          <p>
+          <p style={{ 'margin-top': '30px' }}>
             <h1>RESUME/CV</h1>
             <p>
               <a href={cv} target="_blank">
