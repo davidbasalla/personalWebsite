@@ -25,6 +25,7 @@
 
 .gatsbyImage {
   width: 300px;
+  border: 2px solid rgb(148, 109, 50);
 }
 
 .companies {

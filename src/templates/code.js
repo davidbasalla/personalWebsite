@@ -35,11 +35,14 @@ class CodeTemplate extends React.Component {
 
             <div className={styles.content}>
               <div className={styles.imageContainer}>
-                <Img fluid={work.heroImage.fluid} />
+                <Img
+                  className={styles.gatsbyImage}
+                  fluid={work.largeImage.fluid}
+                />
               </div>
               <div className={styles.textContainer}>
                 {company && (
-                  <div>
+                  <div className={styles.companies}>
                     <a href={company.url} target="_blank">
                       {company.name}
                     </a>
@@ -51,7 +54,9 @@ class CodeTemplate extends React.Component {
                   </div>
                 )}
 
-                <ReactMarkdown source={work.description.description} />
+                <div className={styles.markdown}>
+                  <ReactMarkdown source={work.description.description} />
+                </div>
               </div>
             </div>
           </div>
@@ -82,9 +87,9 @@ export const pageQuery = graphql`
         country
         url
       }
-      heroImage {
+      largeImage {
         id
-        fluid(maxHeight: 200, maxWidth: 600) {
+        fluid(maxWidth: 600) {
           ...GatsbyContentfulFluid
         }
       }
