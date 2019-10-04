@@ -1,3 +1,7 @@
+This is the repo for my personal website [davidbasalla.com](davidbasalla.com). It uses GatsbyJS, the static site generator for generating static html pages which get hydrated with React in the browser and Contentful to manage the content.
+
+---------------
+
 # gatsby-contentful-starter
 
 Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
