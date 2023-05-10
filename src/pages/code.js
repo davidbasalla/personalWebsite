@@ -35,18 +35,7 @@ class WorkIndex extends React.Component {
               <Iconlist />
 
               <h2>Professional</h2>
-              <p>
-                I've worked on multiple projects at{' '}
-                <a href="https://red-badger.com">Red Badger</a> and{' '}
-                <a href="https://unboxed.co">Unboxed</a> - both London-based
-                digital consultancies - across projects in government, banking
-                and ecommerce. I also worked as a civil servant for the British{' '}
-                <a href="https://www.gov.uk/government/organisations/government-digital-service">
-                  Government Digital Service
-                </a>{' '}
-                on the <a href="https://www.gov.uk/">GOV.UK</a> website. Click
-                on each tile below to see more information about each project.
-              </p>
+              <p>See some examples of my public facing work below:</p>
             </div>
             <ul className={styles.tilesList}>
               {workProjects

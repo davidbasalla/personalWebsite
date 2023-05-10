@@ -22,7 +22,7 @@ export default ({ data, location }) => {
             <h2>RESUME/CV</h2>
             <p>
               <a href={cv} target="_blank">
-                PDF
+                PDF (Last updated May 2023)
               </a>
             </p>
           </p>

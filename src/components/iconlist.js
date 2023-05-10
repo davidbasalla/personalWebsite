@@ -4,7 +4,6 @@ import styles from './iconlist.module.css'
 
 // Original vs Plain
 import AwsIcon from 'devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg'
-import BabelIcon from 'devicon/icons/babel/babel-original.svg'
 import Css3Icon from 'devicon/icons/css3/css3-plain-wordmark.svg'
 import Html5Icon from 'devicon/icons/html5/html5-plain-wordmark.svg'
 import RailsIcon from 'devicon/icons/rails/rails-plain-wordmark.svg'
@@ -21,6 +20,10 @@ import MysqlIcon from 'devicon/icons/mysql/mysql-plain-wordmark.svg'
 import MongoIcon from 'devicon/icons/mongodb/mongodb-plain-wordmark.svg'
 import LinuxIcon from 'devicon/icons/linux/linux-original.svg'
 import DockerIcon from 'devicon/icons/docker/docker-plain-wordmark.svg'
+import NestIcon from 'devicon/icons/nestjs/nestjs-plain-wordmark.svg'
+import NextIcon from 'devicon/icons/nextjs/nextjs-original-wordmark.svg'
+import TsIcon from 'devicon/icons/typescript/typescript-plain.svg'
+import KubernetesIcon from 'devicon/icons/kubernetes/kubernetes-plain-wordmark.svg'
 
 export default () => (
   <ul className={styles.iconList}>
@@ -34,10 +37,16 @@ export default () => (
       <JsIcon />
     </li>
     <li>
-      <BabelIcon />
+      <TsIcon />
     </li>
     <li>
       <NodeIcon />
+    </li>
+    <li>
+      <NestIcon />
+    </li>
+    <li>
+      <NextIcon />
     </li>
     <li>
       <ExpressIcon />
@@ -70,10 +79,10 @@ export default () => (
       <MongoIcon />
     </li>
     <li>
-      <LinuxIcon />
+      <DockerIcon />
     </li>
     <li>
-      <DockerIcon />
+      <KubernetesIcon />
     </li>
     <li>
       <AwsIcon />

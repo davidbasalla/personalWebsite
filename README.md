@@ -9,3 +9,7 @@ This is the repo for my personal website [davidbasalla.com](davidbasalla.com). I
 
 - build the site with `yarn build`
 - log into AWS S3 and manually delete files and copy over new files
+
+### Contentful
+
+Data is pulled from Contentful 'automatically' when running `yarn build` or `yarn dev`.
