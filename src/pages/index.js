@@ -11,7 +11,6 @@ import favicon from '../../static/favicon.ico'
 import profile from '../../assets/images/profile-square.jpg'
 import LinkedInIcon from '../../assets/images/linkedin.svg'
 import GithubIcon from '../../assets/images/github.svg'
-import TwitterIcon from '../../assets/images/twitter.svg'
 import StackoverflowIcon from '../../assets/images/stackoverflow.svg'
 import ImdbIcon from '../../assets/images/imdb.svg'
 
@@ -79,15 +78,6 @@ class RootIndex extends React.Component {
                         href="https://www.imdb.com/name/nm2430494"
                       >
                         IMDB
-                      </a>
-                    </li>
-                    <li>
-                      <TwitterIcon className={styles.linkIcon} />
-                      <a
-                        target="_blank"
-                        href="https://twitter.com/david_basalla"
-                      >
-                        Twitter
                       </a>
                     </li>
                   </ul>

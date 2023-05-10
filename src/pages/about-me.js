@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 import profile from '../../assets/images/profile.jpg'
-import cv from '../../assets/docs/CV_2022.pdf'
+import cv from '../../assets/docs/CV_2023.pdf'
 
 import styles from './about.module.css'
 
