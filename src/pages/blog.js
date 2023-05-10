@@ -28,6 +28,7 @@ class BlogIndex extends React.Component {
             ]}
           />
           <div className="wrapper">
+            <h1>Blog</h1>
             <ul className={styles.bloglist}>
               {posts.map(({ node }) => {
                 return (

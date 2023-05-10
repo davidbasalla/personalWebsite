@@ -28,11 +28,13 @@ class WorkIndex extends React.Component {
             ]}
           />
           <div className="wrapper">
+            <h1>Code</h1>
+
             <div className={styles.description}>
-              <h1>Skills</h1>
+              <h2>Skills</h2>
               <Iconlist />
 
-              <h1>Professional</h1>
+              <h2>Professional</h2>
               <p>
                 I've worked on multiple projects at{' '}
                 <a href="https://red-badger.com">Red Badger</a> and{' '}
@@ -64,7 +66,7 @@ class WorkIndex extends React.Component {
             </ul>
 
             <div className={styles.description}>
-              <h1>Other</h1>
+              <h2>Other</h2>
               <p>
                 Click on each tile to see more information about the projects
                 that I worked on.

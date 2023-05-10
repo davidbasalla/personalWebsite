@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 import profile from '../../assets/images/profile.jpg'
-import cv from '../../assets/docs/CV_2019.pdf'
+import cv from '../../assets/docs/CV_2022.pdf'
 
 import styles from './about.module.css'
 
@@ -16,13 +16,14 @@ export default ({ data, location }) => {
       <div className="wrapper">
         <div className={styles.preview}>
           <img className={styles.profilePic} src={profile} />
+          <h1>About</h1>
+
           <p style={{ 'margin-top': '30px' }}>
-            <h1>RESUME/CV</h1>
+            <h2>RESUME/CV</h2>
             <p>
               <a href={cv} target="_blank">
                 PDF
-              </a>{' '}
-              - August 2019
+              </a>
             </p>
           </p>
           <ReactMarkdown source={page.body.body} />

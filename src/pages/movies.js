@@ -37,8 +37,10 @@ class MovieIndex extends React.Component {
             ]}
           />
           <div className="wrapper">
+            <h1>VFX</h1>
+
             <div className={styles.description}>
-              <h1>Movies</h1>
+              <h2>Movies</h2>
               <p>
                 I worked on a number of movies in my Visual Effects career
                 between 2004 and 2014. I focused on texturing, look development,

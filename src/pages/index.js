@@ -49,15 +49,6 @@ class RootIndex extends React.Component {
                   You can find me on:
                   <ul className={styles.contactLinks}>
                     <li>
-                      <TwitterIcon className={styles.linkIcon} />
-                      <a
-                        target="_blank"
-                        href="https://twitter.com/david_basalla"
-                      >
-                        Twitter
-                      </a>
-                    </li>
-                    <li>
                       <LinkedInIcon className={styles.linkIcon} />
                       <a
                         target="_blank"
@@ -88,6 +79,15 @@ class RootIndex extends React.Component {
                         href="https://www.imdb.com/name/nm2430494"
                       >
                         IMDB
+                      </a>
+                    </li>
+                    <li>
+                      <TwitterIcon className={styles.linkIcon} />
+                      <a
+                        target="_blank"
+                        href="https://twitter.com/david_basalla"
+                      >
+                        Twitter
                       </a>
                     </li>
                   </ul>
